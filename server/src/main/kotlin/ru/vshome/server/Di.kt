@@ -1,6 +1,8 @@
 package ru.vshome.server
 
-import org.kodein.di.DI
+import org.kodein.di.*
+import ru.vshome.server.domain.DebugInteractor
+import ru.vshome.server.domain.DebugInteractorImpl
 
 
 val Kodein = DI.lazy {
@@ -23,12 +25,14 @@ val Kodein = DI.lazy {
 //    bind<TestRoutesConfiguration>() with singleton(ref = weakReference) { TestRoutesConfigurationImpl() }
 //    bind<WebServerConnectionConfiguration>() with singleton(ref = weakReference) { WebServerConnectionConfigurationImpl(i()) }
 //
-//    // Interactors
+    // Interactors
+    bind<DebugInteractor>() with singleton { DebugInteractorImpl() }
 //    bind<ConfigurationInteractor>() with singleton { ConfigurationInteractorImpl(i()) }
-//    bind<DebugInteractor>() with singleton { DebugInteractorImpl(i()) }
 //    bind<WebServerConnectionInteractor>() with singleton { WebServerConnectionInteractorImpl(i()) }
 //    bind<UserInteractor>() with singleton { UserInteractorImpl(i()) }
 //
 //    // Api
 //    bind<UserApi>() with singleton { UserApiImpl(i()) }
 }
+
+private inline fun <reified T : Any> DirectDIAware.i(tag: Any? = null): T = instance(tag)

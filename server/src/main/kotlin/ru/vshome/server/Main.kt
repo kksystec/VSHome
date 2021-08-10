@@ -3,12 +3,17 @@ package ru.vshome.server
 import kotlinx.coroutines.CoroutineName
 import kotlinx.coroutines.runBlocking
 import org.apache.logging.log4j.LogManager
+import org.kodein.di.direct
+import org.kodein.di.instance
 import org.slf4j.LoggerFactory
+import ru.vshome.server.domain.DebugInteractor
 
 
 @Suppress("TooGenericExceptionCaught")
 fun main() {
-//    Kodein.direct.instance<DebugInteractor>().setup()
+    // Don't use coroutines before DebugInteractor was setupped
+    Kodein.direct.instance<DebugInteractor>().setup()
+
     runBlocking(CoroutineName("main")) {
         val logger = LoggerFactory.getLogger("server")
         logger.info("starting")
