@@ -9,14 +9,18 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import ru.vshome.ui.LocalNavigation
+import ru.vshome.ui.Screens
+import ru.vshome.ui.navigate
 
 @Composable
 fun ServersScreen(model: ServersViewModel = viewModel()) {
     val state = model.state.collectAsState().value
+    val navigation = LocalNavigation.current
 
     Scaffold(
         floatingActionButton = {
-            FloatingActionButton(onClick = { /*TODO*/ }) {
+            FloatingActionButton(onClick = { navigation.navigate(Screens.AddServer) }) {
                 Text(text = "+")
             }
         }
