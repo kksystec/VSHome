@@ -2,7 +2,7 @@ package ru.vshome.config
 
 object Configuration {
     object Versions {
-//        const val kotlin = "1.5.20"
+        const val kotlin = "1.5.21"
 //        const val kotlinSerializationJson = "1.2.1"
 //        const val coroutines = "1.5.0"
 //        const val ktor = "1.6.0"
@@ -14,7 +14,7 @@ object Configuration {
 //        const val kaml = "0.34.0"
 
         // Android
-//        const val androidPlugin = "4.2.1"
+        const val androidPlugin = "7.0.0"
 //        const val compose = "1.0.0-beta09"
 //        const val activity = "1.3.0-beta02"
 
@@ -36,9 +36,9 @@ object Configuration {
 //    }
 
     object Plugins {
-//        const val kotlin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
+        const val kotlin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
 //        const val kotlinSerialization = "org.jetbrains.kotlin:kotlin-serialization:${Versions.kotlin}"
-//        const val android = "com.android.tools.build:gradle:${Versions.androidPlugin}"
+        const val android = "com.android.tools.build:gradle:${Versions.androidPlugin}"
 //        const val sqlDelight = "com.squareup.sqldelight:gradle-plugin:${Versions.sqlDelight}"
     }
 
