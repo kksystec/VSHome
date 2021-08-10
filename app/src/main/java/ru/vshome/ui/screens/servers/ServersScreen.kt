@@ -2,14 +2,20 @@ package ru.vshome.ui.screens.servers
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
+import kotlinx.coroutines.flow.flow
+import kotlinx.coroutines.flow.toList
 
 @Composable
 fun ServersScreen(model: ServersViewModel = viewModel()) {
+    val state = model.state.collectAsState().value
+
     Scaffold(
         floatingActionButton = {
             FloatingActionButton(onClick = { /*TODO*/ }) {
@@ -17,21 +23,19 @@ fun ServersScreen(model: ServersViewModel = viewModel()) {
             }
         }
     ) {
-        ServersList()
+        ServersList(state.servers)
     }
 }
 
 @Composable
-private fun ServersList() {
+private fun ServersList(servers: List<ServersViewState.ServerUiModel>) {
     LazyColumn {
-        items(20) { i ->
-            ServerItem(ServerUiModel("Server $i", "127.0.0.1:8080"))
-        }
+        items(servers) { ServerItem(it) }
     }
 }
 
 @Composable
-private fun ServerItem(server: ServerUiModel) {
+private fun ServerItem(server: ServersViewState.ServerUiModel) {
     Card(
         Modifier
             .padding(4.dp, 2.dp)
@@ -44,8 +48,3 @@ private fun ServerItem(server: ServerUiModel) {
         }
     }
 }
-
-data class ServerUiModel(
-    val name: String,
-    val address: String
-)
