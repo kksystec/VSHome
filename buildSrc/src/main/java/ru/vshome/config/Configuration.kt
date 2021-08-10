@@ -7,8 +7,8 @@ object Configuration {
         const val coroutines = "1.5.0"
 //        const val ktor = "1.6.0"
         const val kodein = "7.6.0"
-//        const val log4j2 = "2.14.1"
-//        const val slf4j = "1.7.31"
+        const val log4j2 = "2.14.1"
+        const val slf4j = "1.7.31"
 //        const val kGraphQl = "0.17.9"
 //        const val sqlDelight = "1.5.0"
 //        const val kaml = "0.34.0"
@@ -105,11 +105,11 @@ object Configuration {
 //            val styled = "org.jetbrains.kotlin-wrappers:kotlin-styled:${Versions.styled}"
 //        }
 
-//        object Logging {
-//            const val log4j2Api = "org.apache.logging.log4j:log4j-api:${Versions.log4j2}"
-//            const val log4j2Core = "org.apache.logging.log4j:log4j-core:${Versions.log4j2}"
-//            const val log4jSlf4j = "org.apache.logging.log4j:log4j-slf4j-impl:${Versions.log4j2}"
-//            const val slf4j = "org.slf4j:slf4j-api:${Versions.slf4j}"
-//        }
+        object Logging {
+            const val log4j2Api = "org.apache.logging.log4j:log4j-api:${Versions.log4j2}"
+            const val log4j2Core = "org.apache.logging.log4j:log4j-core:${Versions.log4j2}"
+            const val log4jSlf4j = "org.apache.logging.log4j:log4j-slf4j-impl:${Versions.log4j2}"
+            const val slf4j = "org.slf4j:slf4j-api:${Versions.slf4j}"
+        }
     }
 }
