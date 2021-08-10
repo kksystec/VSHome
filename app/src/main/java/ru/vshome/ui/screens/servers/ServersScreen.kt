@@ -1,15 +1,15 @@
-package ru.vshome.ui
+package ru.vshome.ui.screens.servers
 
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.viewmodel.compose.viewModel
 
 @Composable
-fun ServersScreen() {
+fun ServersScreen(model: ServersViewModel = viewModel()) {
     Scaffold(
         floatingActionButton = {
             FloatingActionButton(onClick = { /*TODO*/ }) {
@@ -37,7 +37,11 @@ private fun ServerItem(server: ServerUiModel) {
             .padding(4.dp, 2.dp)
             .fillMaxWidth()
     ) {
-        Text(text = server.name, Modifier.padding(16.dp, 8.dp))
+        Column(Modifier.padding(16.dp, 8.dp)) {
+            Text(text = server.name)
+            Spacer(Modifier.width(8.dp))
+            Text(text = server.address)
+        }
     }
 }
 
