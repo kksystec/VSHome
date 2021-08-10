@@ -7,6 +7,7 @@ plugins {
 dependencies {
     implementation(Dependencies.Coroutines.core)
     implementation(Dependencies.Kodein.core)
+    implementation(Dependencies.Ktor.netty)
 
     implementation(Dependencies.Logging.log4j2Api)
     implementation(Dependencies.Logging.log4j2Core)

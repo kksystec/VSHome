@@ -11,7 +11,7 @@ import ru.vshome.server.domain.DebugInteractor
 
 @Suppress("TooGenericExceptionCaught")
 fun main() {
-    // Don't use coroutines before DebugInteractor was setupped
+§§    // Don't use coroutines before DebugInteractor was setup
     Kodein.direct.instance<DebugInteractor>().setup()
 
     runBlocking(CoroutineName("main")) {

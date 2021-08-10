@@ -5,7 +5,7 @@ object Configuration {
         const val kotlin = "1.5.21"
 //        const val kotlinSerializationJson = "1.2.1"
         const val coroutines = "1.5.0"
-//        const val ktor = "1.6.0"
+        const val ktor = "1.6.0"
         const val kodein = "7.6.0"
         const val log4j2 = "2.14.1"
         const val slf4j = "1.7.31"
@@ -52,18 +52,18 @@ object Configuration {
 //            const val kotlinYaml = "com.charleskorn.kaml:kaml:${Versions.kaml}"
 //        }
 
-//        object Ktor {
+        object Ktor {
 //            const val serverCore = "io.ktor:ktor-server-core:${Versions.ktor}"
 //            const val clientCore = "io.ktor:ktor-client-core:${Versions.ktor}"
 //            const val clientOkHttp = "io.ktor:ktor-client-okhttp:${Versions.ktor}"
 //            const val clientJs = "io.ktor:ktor-client-js:${Versions.ktor}"
 //            const val serverHostCommon = "io.ktor:ktor-server-host-common:${Versions.ktor}"
-//            const val netty = "io.ktor:ktor-server-netty:${Versions.ktor}"
+            const val netty = "io.ktor:ktor-server-netty:${Versions.ktor}"
 //            const val auth = "io.ktor:ktor-auth:${Versions.ktor}"
 //            const val serverSerialization = "io.ktor:ktor-serialization:${Versions.ktor}"
 //            const val clientSerialization = "io.ktor:ktor-client-serialization:${Versions.ktor}"
 //            const val certificates = "io.ktor:ktor-network-tls-certificates:${Versions.ktor}"
-//        }
+        }
 
         object Kodein {
             const val core = "org.kodein.di:kodein-di:${Versions.kodein}"
