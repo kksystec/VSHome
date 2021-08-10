@@ -9,8 +9,6 @@ import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
-import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.flow.toList
 
 @Composable
 fun ServersScreen(model: ServersViewModel = viewModel()) {
