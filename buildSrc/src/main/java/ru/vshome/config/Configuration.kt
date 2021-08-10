@@ -4,9 +4,9 @@ object Configuration {
     object Versions {
         const val kotlin = "1.5.21"
 //        const val kotlinSerializationJson = "1.2.1"
-//        const val coroutines = "1.5.0"
+        const val coroutines = "1.5.0"
 //        const val ktor = "1.6.0"
-//        const val kodein = "7.6.0"
+        const val kodein = "7.6.0"
 //        const val log4j2 = "2.14.1"
 //        const val slf4j = "1.7.31"
 //        const val kGraphQl = "0.17.9"
@@ -43,9 +43,9 @@ object Configuration {
     }
 
     object Dependencies {
-//        object Coroutines {
-//            const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
-//        }
+        object Coroutines {
+            const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutines}"
+        }
 
 //        object Serialization {
 //            const val kotlinJson = "org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.kotlinSerializationJson}"
@@ -65,9 +65,9 @@ object Configuration {
 //            const val certificates = "io.ktor:ktor-network-tls-certificates:${Versions.ktor}"
 //        }
 
-//        object Kodein {
-//            const val core = "org.kodein.di:kodein-di:${Versions.kodein}"
-//        }
+        object Kodein {
+            const val core = "org.kodein.di:kodein-di:${Versions.kodein}"
+        }
 
 //        object KGraphQL {
 //            const val core = "com.apurebase:kgraphql:${Versions.kGraphQl}"
