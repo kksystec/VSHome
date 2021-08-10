@@ -10,6 +10,8 @@
 /buildSrc/.gradle
 /buildSrc/build
 
+/server/build
+
 /build
 /captures
 
