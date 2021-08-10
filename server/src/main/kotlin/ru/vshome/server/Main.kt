@@ -7,6 +7,7 @@ import org.kodein.di.direct
 import org.kodein.di.instance
 import org.slf4j.LoggerFactory
 import ru.vshome.server.domain.DebugInteractor
+import ru.vshome.server.web.WebServer
 
 
 @Suppress("TooGenericExceptionCaught")
@@ -18,7 +19,7 @@ fun main() {
         val logger = LoggerFactory.getLogger("server")
         logger.info("starting")
         try {
-//            Kodein.direct.instance<WebServer>().start()
+            Kodein.direct.instance<WebServer>().start()
             logger.info("all work done, server stopped")
         } catch (e: Exception) {
             logger.error("Fatal exception: ${e.message}", e)

@@ -3,6 +3,8 @@ package ru.vshome.server
 import org.kodein.di.*
 import ru.vshome.server.domain.DebugInteractor
 import ru.vshome.server.domain.DebugInteractorImpl
+import ru.vshome.server.web.WebServer
+import ru.vshome.server.web.WebServerImpl
 
 
 val Kodein = DI.lazy {
@@ -14,7 +16,7 @@ val Kodein = DI.lazy {
 //    bind<UserRepository>() with singleton { UserRepositoryImpl(i()) }
 //    bind<ConfigurationRepository>() with singleton { ConfigurationRepositoryImpl() }
 //
-//    bind<WebServer>() with singleton { WebServerImpl(allInstances(), allInstances()) }
+    bind<WebServer>() with singleton { WebServerImpl(allInstances(), allInstances()) }
 //
 //    // Configurations
 //    bind<AuthenticationConfiguration>() with singleton(ref = weakReference) { AuthenticationConfigurationImpl() }
